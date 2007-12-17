@@ -19,7 +19,6 @@ Patch2:	ivtv-0.4.1-driver_compat.h.patch
 Patch3:	ivtv-0.4.0-utils_Makefile.patch
 Patch4:	ivtv-0.4.1-ivtvfwextract.patch
 URL: http://ivtvdriver.org/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root/
 
 %description
 The primary goal of the IvyTV Project is to create a kernel driver for
