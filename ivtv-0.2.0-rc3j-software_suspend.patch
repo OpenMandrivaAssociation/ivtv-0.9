@@ -1,0 +1,17 @@
+--- ivtv-0.2.0-rc3j/driver/ivtv-driver.c.orig	2005-06-09 21:26:40.000000000 +0200
++++ ivtv-0.2.0-rc3j/driver/ivtv-driver.c	2005-06-09 21:27:27.000000000 +0200
+@@ -451,12 +451,12 @@
+ 	itv->DMA_slock = SPIN_LOCK_UNLOCKED;
+ 
+ #ifdef LINUX26
+-	itv->vbi_work_queues = create_workqueue("ivtv_vbi");
++	itv->vbi_work_queues = create_workqueue("ivtv_vbi", PF_SYNCTHREAD);
+ 	if (itv->vbi_work_queues == NULL) {
+ 		IVTV_KERN_ERR("Could not create VBI workqueue\n");
+ 		return -1;
+ 	}
+-	itv->fw_work_queues = create_workqueue("ivtv_fw");
++	itv->fw_work_queues = create_workqueue("ivtv_fw", PF_SYNCTHREAD);
+ 	if (itv->fw_work_queues == NULL) {
+ 		IVTV_KERN_ERR("Could not create FW workqueue\n");
+ 		return -1;

@@ -1,0 +1,18 @@
+--- ivtv-0.2.0-rc3i/utils/Makefile.orig	2005-04-15 17:37:08.000000000 +0200
++++ ivtv-0.2.0-rc3i/utils/Makefile	2005-04-15 17:37:50.000000000 +0200
+@@ -1,11 +1,12 @@
+-KERNVER = $(shell uname -r)
+-KERNELDIR = /lib/modules/$(KERNVER)/build
++#KERNVER = $(shell uname -r)
++#KERNELDIR = /lib/modules/$(KERNVER)/build
++KERNELDIR = /usr/include/linux
+ SANEEXES = ivtvctl ivtvfbctl ivtvplay
+ INSANEEXES = mpegindex radio vbi fwapi encoder wss vbi_passthrough test_ioctl cx25840ctl
+ EXES = $(SANEEXES) $(INSANEEXES)
+ INSTALLDIR = /usr/local/bin
+ 
+-include $(KERNELDIR)/.config
++#include $(KERNELDIR)/.config
+ 
+ CFLAGS = -I../driver -D_GNU_SOURCE -O2 -Wall
+ CXXFLAGS = $(CFLAGS)
