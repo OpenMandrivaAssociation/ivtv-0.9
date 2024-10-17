@@ -18,7 +18,7 @@ Patch1: ivtv-0.2.0-rc3j-software_suspend.patch
 Patch2:	ivtv-0.4.1-driver_compat.h.patch
 Patch3:	ivtv-0.4.0-utils_Makefile.patch
 Patch4:	ivtv-0.4.1-ivtvfwextract.patch
-URL: http://ivtvdriver.org/
+URL: https://ivtvdriver.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root/
 
 %description
